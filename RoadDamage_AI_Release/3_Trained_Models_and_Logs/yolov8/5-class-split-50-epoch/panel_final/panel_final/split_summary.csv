@@ -1,0 +1,4 @@
+split,num_images,num_augmented_images,num_raw_images,num_labels
+train,4000,2128,1872,11478
+val,758,365,393,2232
+test,388,146,242,925

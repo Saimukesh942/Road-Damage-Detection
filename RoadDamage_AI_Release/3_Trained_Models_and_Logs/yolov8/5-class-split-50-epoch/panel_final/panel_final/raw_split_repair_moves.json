@@ -1,0 +1,233 @@
+[
+  {
+    "class_name": "D10",
+    "sample_id": "china_uav_raw_China_Drone_000006",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D10"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 1
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000012",
+    "from_split": "train",
+    "to_split": "val",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 1
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000053",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 1
+  },
+  {
+    "class_name": "Repair",
+    "sample_id": "china_uav_raw_China_Drone_000023",
+    "from_split": "train",
+    "to_split": "val",
+    "sample_classes": [
+      "Repair"
+    ],
+    "target_count": 3,
+    "new_recipient_count": 1
+  },
+  {
+    "class_name": "Repair",
+    "sample_id": "china_uav_raw_China_Drone_000025",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "Repair"
+    ],
+    "target_count": 3,
+    "new_recipient_count": 1
+  },
+  {
+    "class_name": "D10",
+    "sample_id": "china_uav_raw_China_Drone_000008",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D10"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 2
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000063",
+    "from_split": "train",
+    "to_split": "val",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 2
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000081",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 2
+  },
+  {
+    "class_name": "Repair",
+    "sample_id": "china_uav_raw_China_Drone_000028",
+    "from_split": "train",
+    "to_split": "val",
+    "sample_classes": [
+      "Repair"
+    ],
+    "target_count": 3,
+    "new_recipient_count": 2
+  },
+  {
+    "class_name": "Repair",
+    "sample_id": "china_uav_raw_China_Drone_000029",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "Repair"
+    ],
+    "target_count": 3,
+    "new_recipient_count": 2
+  },
+  {
+    "class_name": "D10",
+    "sample_id": "china_uav_raw_China_Drone_000014",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D10"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 3
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000086",
+    "from_split": "train",
+    "to_split": "val",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 3
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000141",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 3
+  },
+  {
+    "class_name": "Repair",
+    "sample_id": "china_uav_raw_China_Drone_000037",
+    "from_split": "train",
+    "to_split": "val",
+    "sample_classes": [
+      "Repair"
+    ],
+    "target_count": 3,
+    "new_recipient_count": 3
+  },
+  {
+    "class_name": "Repair",
+    "sample_id": "china_uav_raw_China_Drone_000041",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "Repair"
+    ],
+    "target_count": 3,
+    "new_recipient_count": 3
+  },
+  {
+    "class_name": "D10",
+    "sample_id": "china_uav_raw_China_Drone_000016",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D10"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 4
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000153",
+    "from_split": "train",
+    "to_split": "val",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 4
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000161",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 4
+  },
+  {
+    "class_name": "D10",
+    "sample_id": "china_uav_raw_China_Drone_000017",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D10"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 5
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000162",
+    "from_split": "train",
+    "to_split": "val",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 5
+  },
+  {
+    "class_name": "D20",
+    "sample_id": "china_uav_raw_China_Drone_000191",
+    "from_split": "train",
+    "to_split": "test",
+    "sample_classes": [
+      "D20"
+    ],
+    "target_count": 5,
+    "new_recipient_count": 5
+  }
+]

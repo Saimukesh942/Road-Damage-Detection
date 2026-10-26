@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Log In — RoadDamage Detection{% endblock %}
+
+{% block content %}
+
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="{{ url_for('home') }}" class="nav-brand">
+    <span class="nav-brand-icon">✓</span>
+    <span>RoadDamage Detection</span>
+  </a>
+  <div class="nav-links">
+    <a href="{{ url_for('login') }}">Log In</a>
+    <a href="{{ url_for('signup') }}" class="btn btn-nav">Get Started</a>
+    <button class="theme-btn" onclick="toggleTheme()" title="Toggle theme">
+      <span class="icon-moon">🌙</span>
+      <span class="icon-sun">☀️</span>
+    </button>
+  </div>
+</nav>
+
+<div class="auth-layout">
+  <div class="auth-container">
+
+    <!-- Left gradient promo -->
+    <div class="auth-promo">
+      <h2>Welcome back to<br>RoadDamage AI</h2>
+      <p>Detect road damage instantly using our AI-powered analysis system.</p>
+      <ul class="auth-features">
+        <li>5 damage types detected</li>
+        <li>YOLOv8 deep learning model</li>
+        <li>Trained on 2,400+ images</li>
+        <li>Instant results with confidence scores</li>
+      </ul>
+    </div>
+
+    <!-- Right form -->
+    <div class="auth-form-side">
+      <h2>Log in</h2>
+      <p class="auth-sub">Enter your credentials to continue</p>
+
+      <form method="post">
+        <div class="form-group">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="password">PASSWORD</label>
+          <div class="input-wrap">
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <button type="button" class="toggle-pw" onclick="togglePassword('password', this)" aria-label="Toggle password">👁</button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-full btn-lg" type="submit">Log In</button>
+      </form>
+
+      <div class="auth-footer-link">
+        Don't have an account? <a href="{{ url_for('signup') }}">Create one</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>© 2024 RoadDamage AI · Road Damage Detection System</span>
+  <span>Powered by YOLOv8</span>
+</footer>
+
+<script>
+function togglePassword(id, btn) {
+  const input = document.getElementById(id);
+  if (input.type === 'password') { input.type = 'text'; btn.textContent = '🔒'; }
+  else { input.type = 'password'; btn.textContent = '👁'; }
+}
+</script>
+{% endblock %}

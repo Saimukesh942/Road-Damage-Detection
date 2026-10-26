@@ -1,0 +1,18 @@
+{
+  "model_name": "yolov8",
+  "display_name": "YOLOv8x",
+  "weights_path": "/home/road_damage/working/experiments/yolov8/train/yolov8_run/weights/best.pt",
+  "best_val_map50": 0.5931447252963573,
+  "test_map50": 0.5781581605766098,
+  "best_confidence": 0.44999999999999996,
+  "test_precision_best_conf": 0.8628571428571429,
+  "test_recall_best_conf": 0.8162162162162162,
+  "test_f1_best_conf": 0.8388888888888889,
+  "test_precision_conf_025": 0.797752808988764,
+  "test_recall_conf_025": 0.8443243243243244,
+  "test_f1_conf_025": 0.8203781512605042,
+  "params": 68157423,
+  "inference_ms_per_image": 16.424010857008398,
+  "paper_reference_map50": NaN,
+  "notes": "YOLOv8 is the extension model requested for the notebook. The default Kaggle-friendly setup uses a single GPU, batch size 8, and 100 epochs."
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "spain_rebuild_from_original_repo",
+    "status": "active",
+    "assumption": "The unavailable Roboflow Spain export is reconstructed from the original luisaugustos/Pothole-Recognition repository referenced by the paper.",
+    "why": "The paper explicitly references that repository when describing the Spain UAV dataset."
+  },
+  {
+    "id": "spain_label_mapping_if_numeric_only",
+    "status": "active",
+    "assumption": "If the Spain repository exposes only numeric class IDs without a class file, the majority class is mapped to D40 and the minority class is mapped to D00.",
+    "why": "Paper Table 1 reports 3480 Spain annotations for D40 and 327 for D00."
+  },
+  {
+    "id": "yolov7_variant_selection",
+    "status": "active",
+    "assumption": "The paper string 'YOLOv7x-W6' is treated as the official upstream YOLOv7-W6 release.",
+    "why": "No official upstream model is named 'yolov7x-w6'."
+  },
+  {
+    "id": "paper_count_inconsistency_handling",
+    "status": "active",
+    "assumption": "Raw merged image counts and augmented training-view counts are tracked separately and never silently collapsed into one number.",
+    "why": "The paper reports 2893 merged images, 4000 training images, and 4873 split images, which are not fully self-consistent without an augmentation stage."
+  },
+  {
+    "id": "merged_train_offline_augmentation",
+    "status": "active",
+    "assumption": "Offline train augmentation after the raw train split uses paper-described rotation in the range -15° to +15° to build the augmented train view.",
+    "why": "The paper explicitly states rotation in this range for the merged dataset."
+  },
+  {
+    "id": "online_aug_is_mild",
+    "status": "active",
+    "assumption": "Online training augmentation is kept mild to avoid the geometric distortions criticized by the paper figures for default YOLO augmentation.",
+    "why": "The paper notes that default parameters can distort the road-damage imagery."
+  },
+  {
+    "id": "tph_model_choice",
+    "status": "active",
+    "assumption": "The official TPH-YOLOv5 public config models/yolov5l-xs-tph.yaml is used.",
+    "why": "It is the official public implementation and the paper does not publish an alternate road-damage-specific TPH config."
+  }
+]

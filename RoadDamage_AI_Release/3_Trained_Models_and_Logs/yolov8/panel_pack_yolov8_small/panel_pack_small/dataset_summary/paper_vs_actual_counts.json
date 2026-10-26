@@ -1,0 +1,10 @@
+{
+  "paper_spain_raw_images": 568,
+  "paper_spain_total_images": 1362,
+  "paper_target_augmented_train_images": 4000,
+  "actual_spain_raw_images": 111,
+  "actual_spain_total_images": 1354,
+  "actual_merged_train_images": 4000,
+  "actual_merged_val_images": 750,
+  "actual_merged_test_images": 375
+}

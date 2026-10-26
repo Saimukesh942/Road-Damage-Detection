@@ -1,0 +1,18 @@
+{
+  "model_name": "yolov7",
+  "display_name": "YOLOv7-W6",
+  "weights_path": "/kaggle/working/road_damage_repro/experiments/yolov7/train/yolov7_100e_run/weights/best.pt",
+  "best_val_map50": 0.4584360299673042,
+  "test_map50": 0.5232022414241253,
+  "best_confidence": 0.15,
+  "test_precision_best_conf": 0.7427652733118971,
+  "test_recall_best_conf": 0.66,
+  "test_f1_best_conf": 0.6989409984871408,
+  "test_precision_conf_025": 0.7559322033898305,
+  "test_recall_conf_025": 0.6371428571428571,
+  "test_f1_conf_025": 0.6914728682170542,
+  "params": null,
+  "inference_ms_per_image": 243.88581812502252,
+  "paper_reference_map50": 0.737,
+  "notes": "The paper says YOLOv7x-W6, which is not an official upstream identifier. This notebook uses official yolov7-w6 as the closest released counterpart."
+}

@@ -1,0 +1,11 @@
+{
+  "root_out": "/kaggle/working/road_damage_repro",
+  "merged_dataset_root": "/kaggle/working/road_damage_repro/datasets/merged_uav_paper_style",
+  "spain_dataset_root": "/kaggle/working/road_damage_repro/datasets/spain_rebuilt",
+  "china_dataset_root": "/kaggle/working/road_damage_repro/datasets/china_uav_rebuilt",
+  "summaries_dir": "/kaggle/working/road_damage_repro/summaries",
+  "experiments_dir": "/kaggle/working/road_damage_repro/experiments",
+  "comparison_csv": "/kaggle/working/road_damage_repro/summaries/model_comparison.csv",
+  "assumptions_json": "/kaggle/working/road_damage_repro/summaries/assumptions.json",
+  "dataset_yaml": "/kaggle/working/road_damage_repro/datasets/merged_uav_paper_style/data.yaml"
+}
