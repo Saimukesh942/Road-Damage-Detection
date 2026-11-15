@@ -1,0 +1,22 @@
+Panel / Paper Artifact Notes
+================================
+Generated: 2026-04-16T12:54:22.111805Z
+Model: YOLOv7-W6
+Weights: /kaggle/working/road_damage_repro/experiments/yolov7/train/yolov7_100e_run/weights/best.pt
+
+Key metrics:
+- Validation mAP@0.5: 0.4584
+- Test mAP@0.5: 0.5232
+- Test F1 at best confidence: 0.6989
+- Best confidence: 0.1500
+- Params: None
+- Approx. inference ms/image: 243.886
+
+Important statistical caution:
+The following classes have very low validation/test support, so per-class metrics may be unstable:
+- val D20: 5 labels
+- val D40: 1 labels
+- val Repair: 17 labels
+- test D20: 5 labels
+- test D40: 2 labels
+- test Repair: 4 labels

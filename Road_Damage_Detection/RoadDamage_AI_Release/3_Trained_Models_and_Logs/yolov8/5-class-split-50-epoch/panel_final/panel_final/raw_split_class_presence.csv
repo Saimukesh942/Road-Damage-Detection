@@ -1,0 +1,16 @@
+split,class_name,num_images_with_class
+train,D00,1090
+train,D10,882
+train,D20,254
+train,D40,766
+train,Repair,574
+val,D00,264
+val,D10,136
+val,D20,5
+val,D40,350
+val,Repair,3
+test,D00,264
+test,D10,5
+test,D20,5
+test,D40,111
+test,Repair,3

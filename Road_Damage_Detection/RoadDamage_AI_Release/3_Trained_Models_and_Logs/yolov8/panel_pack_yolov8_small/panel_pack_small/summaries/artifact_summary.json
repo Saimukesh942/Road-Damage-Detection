@@ -1,0 +1,11 @@
+{
+  "root_out": "/home/road_damage/working",
+  "merged_dataset_root": "/home/road_damage/working/datasets/merged_uav_paper_style",
+  "spain_dataset_root": "/home/road_damage/working/datasets/spain_rebuilt",
+  "china_dataset_root": "/home/road_damage/working/datasets/china_uav_rebuilt",
+  "summaries_dir": "/home/road_damage/working/summaries",
+  "experiments_dir": "/home/road_damage/working/experiments",
+  "comparison_csv": "/home/road_damage/working/summaries/model_comparison.csv",
+  "assumptions_json": "/home/road_damage/working/summaries/assumptions.json",
+  "dataset_yaml": "/home/road_damage/working/datasets/merged_uav_paper_style/data.yaml"
+}

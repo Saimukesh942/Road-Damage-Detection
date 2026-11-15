@@ -1,0 +1,8 @@
+id,status,assumption,why
+spain_rebuild_from_original_repo,active,The unavailable Roboflow Spain export is reconstructed from the original luisaugustos/Pothole-Recognition repository referenced by the paper.,The paper explicitly references that repository when describing the Spain UAV dataset.
+spain_label_mapping_if_numeric_only,active,"If the Spain repository exposes only numeric class IDs without a class file, the majority class is mapped to D40 and the minority class is mapped to D00.",Paper Table 1 reports 3480 Spain annotations for D40 and 327 for D00.
+yolov7_variant_selection,active,The paper string 'YOLOv7x-W6' is treated as the official upstream YOLOv7-W6 release.,No official upstream model is named 'yolov7x-w6'.
+paper_count_inconsistency_handling,active,Raw merged image counts and augmented training-view counts are tracked separately and never silently collapsed into one number.,"The paper reports 2893 merged images, 4000 training images, and 4873 split images, which are not fully self-consistent without an augmentation stage."
+merged_train_offline_augmentation,active,Offline train augmentation after the raw train split uses paper-described rotation in the range -15° to +15° to build the augmented train view.,The paper explicitly states rotation in this range for the merged dataset.
+online_aug_is_mild,active,Online training augmentation is kept mild to avoid the geometric distortions criticized by the paper figures for default YOLO augmentation.,The paper notes that default parameters can distort the road-damage imagery.
+tph_model_choice,active,The official TPH-YOLOv5 public config models/yolov5l-xs-tph.yaml is used.,It is the official public implementation and the paper does not publish an alternate road-damage-specific TPH config.

@@ -1,0 +1,2 @@
+model,dataset,precision,recall,mAP@0.5,mAP@0.5:0.95,weights
+TPH-YOLOv5l-xs,merged_uav_paper_style,0.239,0.466,0.303,0.156,/kaggle/working/road_damage_repro/experiments/yolov5_tph/train/yolov5_tph_100e_run/weights/best.pt
