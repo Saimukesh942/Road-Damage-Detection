@@ -1,0 +1,42 @@
+# ===========================
+# RoadSense AI .gitignore
+# ===========================
+
+# --- Large model weights ---
+*.pt
+*.pth
+*.onnx
+*.tflite
+
+# --- Large archive bundles ---
+3_Trained_Models_and_Logs/**/*.zip
+
+# --- Python bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS files ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# --- Runtime / temp ---
+.runtime/
+*.sqlite3
+
+# --- Ultralytics config ---
+Ultralytics/

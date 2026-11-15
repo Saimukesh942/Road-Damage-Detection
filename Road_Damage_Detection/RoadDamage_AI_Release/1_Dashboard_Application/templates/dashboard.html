@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — RoadDamage Detection{% endblock %}
+
+{% block head %}
+<script src="{{ url_for('static', filename='dashboard.js') }}?v=v6" defer></script>
+{% endblock %}
+
+{% block content %}
+<div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="{{ url_for('dashboard') }}" class="nav-brand">
+      <span class="nav-brand-icon">✓</span>
+      <span>RoadDamage Detection</span>
+    </a>
+    <div class="nav-links">
+      <span style="font-size:13px;color:#94a3b8;">Hi, <strong style="color:#fff">{{ user_first_name }}</strong></span>
+      <button class="theme-btn" onclick="toggleTheme()" title="Toggle theme">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+      </button>
+      <form action="{{ url_for('logout') }}" method="post" style="margin:0;">
+        <button class="btn btn-secondary" style="padding:6px 14px;font-size:12px;" type="submit">Logout</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="dash-content">
+    <div class="dash-grid">
+
+      <!-- LEFT: Upload -->
+      <div>
+        <div class="card">
+          <h2 class="card-title">Upload Image</h2>
+          <p class="card-sub">Select a road image to analyze for damage.</p>
+
+          <input id="image-input" class="visually-hidden" type="file" accept=".jpg,.jpeg,.png,.bmp,.webp">
+
+          <div id="dropzone" class="upload-zone" tabindex="0" role="button">
+            <div class="upload-icon">📷</div>
+            <h3>Drop image here</h3>
+            <p id="dropzone-copy">or click to browse files</p>
+          </div>
+
+          <div id="file-info" class="file-info hidden">
+            <img id="file-thumb" alt="Preview">
+            <div class="file-details">
+              <div class="file-name" id="file-name">No file</div>
+              <div class="file-size" id="file-size">—</div>
+            </div>
+            <button id="remove-file" class="file-remove" type="button" title="Remove">✕</button>
+          </div>
+
+          <div class="upload-actions">
+            <button class="btn btn-primary btn-full" id="run-btn" type="button" disabled>
+              🔍 Run Detection
+            </button>
+
+          </div>
+
+          <p id="status-msg" class="status-msg" data-status="neutral">Ready. Upload an image to begin.</p>
+        </div>
+      </div>
+
+      <!-- CENTER: Viewer -->
+      <div>
+        <div class="image-pair">
+          <div class="viewer-card">
+            <div class="viewer-header"><h3>Original Image</h3></div>
+            <div class="viewer-body">
+              <div id="preview-empty" class="viewer-empty">
+                <div class="empty-icon">🖼️</div>
+                <h4>No Image</h4>
+                <p>Upload an image to preview.</p>
+              </div>
+              <img id="preview-image" class="hidden" alt="Uploaded preview">
+            </div>
+          </div>
+
+          <div class="viewer-card">
+            <div class="viewer-header">
+              <h3>Detection Result</h3>
+              <span id="model-chip" class="chip hidden">{{ model_label }}</span>
+            </div>
+            <div class="viewer-body">
+              <div id="result-empty" class="viewer-empty">
+                <div class="empty-icon">🔍</div>
+                <h4>Waiting</h4>
+                <p>Click "Run Detection" to analyze.</p>
+              </div>
+              <div id="result-loader" class="viewer-empty hidden">
+                <div class="spinner"></div>
+                <h4>Analyzing...</h4>
+                <p>YOLOv8 is processing the image.</p>
+              </div>
+              <img id="result-image" class="hidden" alt="Detection result">
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end;">
+          <a id="download-btn" class="btn btn-secondary hidden" style="font-size:12px;padding:6px 14px;" href="#" download="detection-result.png">⬇ Download</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Results -->
+      <div>
+        <div class="card">
+          <h2 class="card-title">Results</h2>
+          <p class="card-sub">Detection summary</p>
+
+          <div class="result-stat">
+            <span class="stat-value" id="det-count">0</span>
+            <span class="stat-label">Damages Found</span>
+          </div>
+          <div class="result-stat">
+            <span class="stat-value" id="det-confidence">0%</span>
+            <span class="stat-label">Top Confidence</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h2 class="card-title">Detections</h2>
+          <div id="detection-list">
+            <div class="empty-results">No detections yet.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RECENT SEARCHES -->
+    <div class="card" style="margin-top:20px;">
+      <div class="history-header">
+        <div>
+          <h2 class="card-title">Recent Searches</h2>
+          <p class="card-sub">Your previously analyzed images</p>
+        </div>
+        <button id="clear-history-btn" class="btn btn-secondary hidden" style="font-size:12px;padding:6px 14px;" type="button">
+          🗑️ Clear History
+        </button>
+      </div>
+
+      <div id="history-container">
+        <div class="history-loading">
+          <div class="spinner"></div>
+          <p style="font-size:13px;color:var(--text-muted);">Loading history...</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>© 2024 RoadDamage AI · Road Damage Detection System</span>
+    <span>Powered by YOLOv8</span>
+  </footer>
+
+</div>
+{% endblock %}

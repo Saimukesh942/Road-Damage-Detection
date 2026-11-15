@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RoadDamage Detection — Detect road damage instantly with AI">
+    <title>{% block title %}RoadDamage Detection{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=v4">
+    <script>
+      // Apply saved theme immediately to prevent flash
+      (function() {
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.style.colorScheme = 'dark';
+      })();
+    </script>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <script>
+      // Apply dark class ASAP before paint
+      if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
+    </script>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-stack" id="flash-stack">
+          {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+        <script>
+          setTimeout(() => {
+            const el = document.getElementById('flash-stack');
+            if (el) { el.style.opacity = '0'; setTimeout(() => el.remove(), 400); }
+          }, 3000);
+        </script>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      }
+    </script>
+  </body>
+</html>

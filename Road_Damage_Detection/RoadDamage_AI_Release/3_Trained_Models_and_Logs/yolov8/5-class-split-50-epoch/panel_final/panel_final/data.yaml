@@ -1,0 +1,11 @@
+path: /home/road_damage/working/datasets/merged_uav_paper_style
+train: /home/road_damage/working/datasets/merged_uav_paper_style/images/train
+val: /home/road_damage/working/datasets/merged_uav_paper_style/images/val
+test: /home/road_damage/working/datasets/merged_uav_paper_style/images/test
+nc: 5
+names:
+- D00
+- D10
+- D20
+- D40
+- Repair

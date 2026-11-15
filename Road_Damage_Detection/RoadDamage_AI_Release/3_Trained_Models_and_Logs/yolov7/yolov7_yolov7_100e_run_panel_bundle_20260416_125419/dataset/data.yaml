@@ -1,0 +1,11 @@
+path: /kaggle/working/road_damage_repro/datasets/merged_uav_paper_style
+train: /kaggle/working/road_damage_repro/datasets/merged_uav_paper_style/images/train
+val: /kaggle/working/road_damage_repro/datasets/merged_uav_paper_style/images/val
+test: /kaggle/working/road_damage_repro/datasets/merged_uav_paper_style/images/test
+nc: 5
+names:
+- D00
+- D10
+- D20
+- D40
+- Repair
